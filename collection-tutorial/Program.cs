@@ -8,17 +8,18 @@ namespace collection_tutorial
 		static void Main(string[] args)
 		{
 			var rnd = new Random();
-			var frames = new List<int>();
-
-			for(var idx = 0; idx < 30; idx++)
-			{
+			int[] game = new int[10];
+			//var frames = new List<int>();
+			for (var idx = 0; idx < 10; idx++)
+			{ 
 				var frame = rnd.Next(0, 31);
-				frames.Add(frame);
+				game[idx] = frame;
+				//	frames.Add(frame);
 			}
-			var game = 0;
-			foreach(var score in frames)
+			var sum = 0;
+			foreach(var score in game)
 			{
-				game += score;
+				sum += score;
 			}
 			Console.WriteLine($"Games is {game}");
 
